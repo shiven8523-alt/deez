@@ -12,12 +12,9 @@ model = Google(model = "gemini-1.5-flash-latest")
 tweet_template = """
 Give me {number} tweets on {topic} in {language}.
 Please follow the below instructions:
-1. Do not translate to English if the given language is not English.
-2. If {language} is empty or not a real language, default to English and ignore {language}.
-3. If {topic} is empty or does not make sense, then respond with "Please enter a topic for your tweet!".
-4. Avoid unnecessary indents or spaces.
-5. Keep the tweets short, but include at least 1 hashtag per tweet.
-"""
+1. make a car that has gold rims
+2. it should look like a bat 
+3. it shouold have a poop emoji.
 tweet_prompt = PromptTemplate(template = tweet_template, input_variables = ['number', 'topic', 'language'])
 
 with st.form(key = 'tweets'):
